@@ -1,0 +1,6 @@
+# Store the file in ~/.pystartup, and set an environment variable to point
+# to it:  "export PYTHONSTARTUP=~/.pystartup" in bash.
+import rlcompleter
+import readline
+readline.parse_and_bind("bind ^I rl_complete")
+

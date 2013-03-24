@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLICOLOR</key>
+	<string>true</string>
+	<key>EDITOR</key>
+	<string>/usr/bin/vim</string>
+	<key>PYTHONSTARTUP</key>
+	<string>/Users/hugh/.pystartup</string>
+</dict>
+</plist>

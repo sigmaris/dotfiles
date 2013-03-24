@@ -1,0 +1,34 @@
+[credential]
+	helper = osxkeychain
+[color]
+	# Use colors in Git commands that are capable of colored output when outputting to the terminal
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[alias]
+	new = !sh -c \"git fetch origin && git checkout -b \\$0 origin/master\"
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an, %cr)%Creset' --abbrev-commit --date=relative
+	lga = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an, %cr)%Creset' --abbrev-commit --date=relative
+[mergetool]
+	keepBackup = false
+[merge]
+	tool = opendiff
+[core]
+	excludesfile = ~/.gitignore_global
+[push]
+	# push the current branch to its upstream branch
+	default = upstream
+[apply]
+	# Detect whitespace errors when applying a patch
+	whitespace = fix

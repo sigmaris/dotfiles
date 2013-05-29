@@ -2,6 +2,18 @@
 PATH=/Users/hugh/bin:/usr/local/bin:$PATH:/usr/texbin
 export PATH
 
+#!/bin/bash
+MAGENTA="\[\033[0;35m\]"
+YELLOW="\[\033[0;33m\]"
+BLUE="\[\033[34m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+CYAN="\[\033[0;36m\]"
+GREEN="\[\033[0;32m\]"
+GIT_PS1_SHOWDIRTYSTATE=true
+export LS_OPTIONS='--color=auto'
+export CLICOLOR='Yes'
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+
 if [[ -n "`which brew`" && -f `brew --prefix`/etc/bash_completion ]]; then
   . `brew --prefix`/etc/bash_completion
 fi
@@ -16,7 +28,13 @@ fi
 
 if [ -f /usr/share/git-core/git-prompt.sh ]; then
   . /usr/share/git-core/git-prompt.sh
-  PS1='\[\e[G\e]0;\u@\h:\w\a\]\u@\[\e[33m\]\h\[\e[39m\]:\w$(__git_ps1 "(%s)") \$ '
+  PS1='\[\e[G\e]0;\u@\h:\w\a\]\u@\[\e[33m\]\h\[\e[39m\]:\w$(
+  if [[ $(__git_ps1) =~ \*\)$ ]]
+  then echo "'$YELLOW'"$(__git_ps1 "(%s)")
+  elif [[ $(__git_ps1) =~ \+\)$ ]]
+  then echo "'$MAGENTA'"$(__git_ps1 "(%s)")
+  else echo "'$CYAN'"$(__git_ps1 "(%s)")
+  fi)\[\e[39m\]'" \$ "
 else
   PS1='\[\e[G\e]0;\u@\h:\w\a\]\u@\[\e[33m\]\h\[\e[39m\]:\w \$ '
 fi

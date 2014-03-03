@@ -11,8 +11,10 @@ CYAN="\[\033[0;36m\]"
 GREEN="\[\033[0;32m\]"
 GIT_PS1_SHOWDIRTYSTATE=true
 export LS_OPTIONS='--color=auto'
-export CLICOLOR='Yes'
+export CLICOLOR=true
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+export EDITOR=/usr/bin/vim
+export PYTHONSTARTUP="$HOME/.pystartup"
 
 if [[ -n "`which brew`" && -f `brew --prefix`/etc/bash_completion ]]; then
   . `brew --prefix`/etc/bash_completion

@@ -47,4 +47,5 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/Users/hugh/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
 export PYTHONSTARTUP=/Users/hugh/.pystartup
+export EDITOR="subl -n -w"
 

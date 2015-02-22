@@ -2,7 +2,8 @@
 PATH=/Users/hugh/bin:/usr/local/bin:$PATH:/usr/texbin
 export PATH
 
-#!/bin/bash
+export EDITOR="subl -n -w"
+
 MAGENTA="\[\033[0;35m\]"
 YELLOW="\[\033[0;33m\]"
 BLUE="\[\033[34m\]"
@@ -13,7 +14,6 @@ GIT_PS1_SHOWDIRTYSTATE=true
 export LS_OPTIONS='--color=auto'
 export CLICOLOR=true
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
-export EDITOR=/usr/bin/vim
 export PYTHONSTARTUP="$HOME/.pystartup"
 
 if [[ -n "`which brew`" && -f `brew --prefix`/etc/bash_completion ]]; then

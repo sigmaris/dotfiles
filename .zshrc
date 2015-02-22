@@ -10,6 +10,10 @@ ZSH_THEME="agnoster"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias activate="source venv/bin/activate"
+alias replace-as-instance="aws autoscaling terminate-instance-in-auto-scaling-group --no-should-decrement-desired-capacity --instance-id"
+alias start-miredo="sudo kextload /System/Library/Extensions/tun-signed.kext && sudo /usr/local/sbin/miredo"
+alias restart-miredo="sudo pkill -f miredo; sudo /usr/local/sbin/miredo"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -48,6 +52,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/Users/hugh/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
 export PYTHONSTARTUP=/Users/hugh/.pystartup
 export EDITOR="subl -n -w"
+export DEVKITPRO=/Users/hugh/devkitPro
+export DEVKITPPC="${DEVKITPRO}/devkitPPC"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Source
 source /usr/local/bin/virtualenvwrapper.sh

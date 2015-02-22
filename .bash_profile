@@ -15,6 +15,9 @@ export LS_OPTIONS='--color=auto'
 export CLICOLOR=true
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 export PYTHONSTARTUP="$HOME/.pystartup"
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Source
+source /usr/local/bin/virtualenvwrapper.sh
 
 if [[ -n "`which brew`" && -f `brew --prefix`/etc/bash_completion ]]; then
   . `brew --prefix`/etc/bash_completion

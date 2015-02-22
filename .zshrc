@@ -48,4 +48,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/Users/hugh/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin
 export PYTHONSTARTUP=/Users/hugh/.pystartup
 export EDITOR="subl -n -w"
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Source
+source /usr/local/bin/virtualenvwrapper.sh
 

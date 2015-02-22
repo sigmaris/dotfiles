@@ -1,6 +1,13 @@
 # Store the file in ~/.pystartup, and set an environment variable to point
 # to it:  "export PYTHONSTARTUP=~/.pystartup" in bash.
-import rlcompleter
-import readline
-readline.parse_and_bind("bind ^I rl_complete")
+try:
+    import readline
+except ImportError:
+    print("Module readline not available.")
+else:
+    import rlcompleter
+    if 'libedit' in readline.__doc__:
+        readline.parse_and_bind("bind ^I rl_complete")
+    else:
+        readline.parse_and_bind("tab: complete")
 
